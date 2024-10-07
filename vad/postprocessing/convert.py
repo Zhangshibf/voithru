@@ -10,7 +10,6 @@ def convert_frames_to_samples(frames, sample_rate=16000, hop_ms=10, window_ms=10
         print(sample_rate)
         print(hop_ms)
         print("aaa")
-        break
     window_samples = sample_rate * window_ms / 1000
 
     num_samples = int((len(frames) - 1) * hop_samples + window_samples)

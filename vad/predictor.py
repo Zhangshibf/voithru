@@ -34,7 +34,7 @@ class VADPredictParameters:
     hang_over_ms: int
     activity_max_seconds: int
     return_probs: bool
-    probs_sample_rate: 16000
+    probs_sample_rate: Optional[int]
     show_progress_bar: bool
 
 

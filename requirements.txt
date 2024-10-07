@@ -1,5 +1,6 @@
 #USE PYTHON==3.6.12!!!!!
 essentia==2.1b6.dev184
+opencv-python==4.3.0.38
 joblib==0.17.0
 librosa==0.8.0
 more-itertools==8.2.0

@@ -47,4 +47,4 @@ def predict_vad_from_scratch(
         output_path.parent.mkdir(parents=True, exist_ok=True)
         voice_activity.save(path=output_path)
     else:
-        print(voice_activity)
+        print(voice_activity[:10])

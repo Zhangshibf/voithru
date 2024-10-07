@@ -20,7 +20,7 @@ def predict_vad_from_scratch(
     min_hill_ms: int = 0,
     hang_before_ms: int = 0,
     hang_over_ms: int = 0,
-    return_probs: bool = False,
+    return_probs: bool = True,
     probs_sample_rate: Optional[int] = None,
 ):
     predictor = VADFromScratchPredictor.from_checkpoint(

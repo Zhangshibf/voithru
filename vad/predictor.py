@@ -136,7 +136,7 @@ class VADFromScratchPredictor:
             if parameters.return_probs:
                 sample_probabilities = convert_frames_to_samples(
                     boosted_frame_probabilities,
-                    sample_rate=parameters.probs_sample_rate,
+                    sample_rate=16000,
                     hop_ms=hop_ms,
                     window_ms=window_ms,
                 )

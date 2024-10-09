@@ -158,7 +158,7 @@ class VADFromScratchPredictor:
 
     def predict_probabilities(self, audio_data: AudioData) -> np.array:
         feature = self.feature_extractor.extract_with_postprocessing(audio_data)
-        print(f"Shape of extracted features: {feature.shape}")
+
 
         if self.feature_extractor.config.transform is None:
             hop_samples = int(
@@ -219,7 +219,7 @@ class VADFromScratchPredictor:
                 inputs.append({"feature": feature_window, "positions": label_neighbors})
 
             batch_inputs = default_collate(batch=inputs)
-            print(f"Shape of batch input features: {batch_inputs['feature'].shape}")
+
             self.model.eval()
             with torch.no_grad():
                 batch_inputs["feature"] = batch_inputs["feature"].to(device=self.device)
